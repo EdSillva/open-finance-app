@@ -1,0 +1,11 @@
+[
+  {"id": "SP", "name": "São Paulo", "d": "M200,300 L220,300 L220,320 L200,320 Z"},
+  {"id": "RJ", "name": "Rio de Janeiro", "d": "M230,320 L245,320 L245,335 L230,335 Z"},
+  {"id": "MG", "name": "Minas Gerais", "d": "M215,280 L235,280 L235,300 L215,300 Z"},
+  {"id": "BA", "name": "Bahia", "d": "M260,210 L285,210 L285,240 L260,240 Z"},
+  {"id": "PE", "name": "Pernambuco", "d": "M275,180 L290,180 L290,195 L275,195 Z"},
+  {"id": "RS", "name": "Rio Grande do Sul", "d": "M170,360 L195,360 L195,385 L170,385 Z"},
+  {"id": "PR", "name": "Paraná", "d": "M170,330 L195,330 L195,360 L170,360 Z"},
+  {"id": "SC", "name": "Santa Catarina", "d": "M170,350 L190,350 L190,365 L170,365 Z"},
+  {"id": "CE", "name": "Ceará", "d": "M320,110 L340,110 L340,130 L320,130 Z"}
+]

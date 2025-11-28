@@ -1,0 +1,47 @@
+# Node
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Env files
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+
+# OS artifacts
+Thumbs.db
+desktop.ini
+
+# TypeScript
+*.tsbuildinfo
+
+# Yarn / pnpm lockfiles (if you want to ignore lockfile, remove these)
+# yarn.lock
+# pnpm-lock.yaml
+
+# Local dev files
+.local
+
+# Test / coverage
+.nyc_output/
+coverage/
+
+# Misc
+dist_*/
+*.tgz
+
