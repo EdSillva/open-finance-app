@@ -16,24 +16,6 @@ const router = createRouter({
       meta: { title: 'Predição de Adesão' },
     },
     {
-      path: '/institutions',
-      name: 'Institutions',
-      component: () => import('@/views/InstitutionsView.vue'),
-      meta: { title: 'Instituições' },
-    },
-    {
-      path: '/services',
-      name: 'Services',
-      component: () => import('@/views/ServicesView.vue'),
-      meta: { title: 'Serviços' },
-    },
-    {
-      path: '/analytics',
-      name: 'Analytics',
-      component: () => import('@/views/AnalyticsView.vue'),
-      meta: { title: 'Analytics' },
-    },
-    {
       path: '/settings',
       name: 'Settings',
       component: () => import('@/views/SettingsView.vue'),
