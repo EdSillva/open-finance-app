@@ -15,12 +15,7 @@
               <input type="checkbox" class="toggle toggle-primary" v-model="isDark" />
             </label>
           </div>
-          <div class="form-control">
-            <label class="label cursor-pointer">
-              <span class="label-text">Notificações</span>
-              <input type="checkbox" class="toggle toggle-primary" checked />
-            </label>
-          </div>
+
         </div>
       </div>
     </div>
