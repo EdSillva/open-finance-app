@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { useDashboardStore } from '@/stores/dashboard'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -14,6 +15,17 @@ const router = createRouter({
       name: 'Dashboard',
       component: () => import('@/views/DashboardView.vue'),
       meta: { title: 'Dashboard' },
+      beforeEnter: async () => {
+        // Prefetch data for dashboard when navigating to this route
+        try {
+          const store = useDashboardStore()
+          if (!store.loading && store.estadosData.length === 0) {
+            await store.fetchDashboardData()
+          }
+        } catch (e) {
+          // ignore errors here — view will show error state
+        }
+      },
     },
     {
       path: '/prediction',

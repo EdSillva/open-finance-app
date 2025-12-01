@@ -51,6 +51,23 @@ export const useDashboardStore = defineStore('dashboard', () => {
     } catch (err) {
       console.error('Erro ao carregar dados do dashboard:', err)
       error.value = 'Erro ao carregar dados. Verifique se a API está rodando.'
+      // retry once after short delay for transient errors (cold start)
+      try {
+        await new Promise(res => setTimeout(res, 1000))
+        const statsDataRetry = await apiService.getStatistics()
+        const estadosOrdenados = statsDataRetry.por_estado.sort(
+          (a: any, b: any) => b.count - a.count
+        )
+        estadosData.value = estadosOrdenados.map((item: any) => ({
+          Estado: item.Estado,
+          count: item.count,
+          aderiu: item.aderiu || 0,
+          nao_aderiu: item.nao_aderiu || 0,
+        }))
+        error.value = null
+      } catch (err2) {
+        console.error('Retry falhou:', err2)
+      }
     } finally {
       loading.value = false
     }
